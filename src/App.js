@@ -1,5 +1,5 @@
 import Navbar from './Components/Navbar';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Agenda from './Components/Agenda';
 import Club from './Components/Club';
 import Comptes from './Components/Comptes';
@@ -14,16 +14,16 @@ function App() {
     <Router>
       <div>
         <Navbar />
-        <Switch>
-          <Route path="/club" exact component={Club} />
-          <Route path="/agenda" component={Agenda} />
-          <Route path="/services" component={Services} />
-          <Route path="/travaux" component={Travaux} />
-          <Route path="/formations" component={Formations} />
-          <Route path="/projets" component={Projets} />
-          <Route path="/panier" component={Panier} />
-          <Route path="/comptes" component={Comptes} />
-        </Switch>
+        <Routes>
+          <Route exact path="/club" element={<Club/>} />
+          <Route exact path="/agenda" element={<Agenda/>} />
+          <Route exact path="/services" element={<Services/>} />
+          <Route exact path="/travaux" element={<Travaux/>} />
+          <Route exact path="/formations" element={<Formations/>} />
+          <Route exact path="/projets" element={<Projets/>} />
+          <Route exact path="/panier" element={<Panier/>} />
+          <Route exact path="/comptes" element={<Comptes/>} />
+        </Routes>
       </div>
     </Router>
   );

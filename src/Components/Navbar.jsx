@@ -12,7 +12,6 @@ function Navbar() {
         <li><a href="/projets">Vos projets</a></li>
         <li><a href="/panier">Panier</a></li>
         <li><a href="/comptes">Comptes</a></li>
-        
       </ul>
     </nav>
   );
