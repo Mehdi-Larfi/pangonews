@@ -41,3 +41,21 @@ code {
 #clubpress:hover .dropdown-content {
   display: block;
 }
+
+#nos_services {
+  position:relative;
+  display: inline-block;
+}
+
+#nos_services:hover .dropdown-content {
+  display: block;
+}
+
+#projets {
+  position: relative;
+  display: inline-block;
+}
+
+#projets:hover .dropdown-content {
+  display: block;
+}
