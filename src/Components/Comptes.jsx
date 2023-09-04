@@ -2,7 +2,7 @@ import React from 'react'
 
 function Comptes() {
   return (
-    <div>Comptes</div>
+    <div></div>
   )
 }
 
