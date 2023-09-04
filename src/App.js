@@ -8,11 +8,13 @@ import Panier from './Components/Panier';
 import Projets from './Components/Projets';
 import Services from './Components/Services';
 import Travaux from './Components/Travaux';
+import Menu from './Components/Menu'
 
 function App() {
   return (
     <Router>
       <div>
+        <Menu />
         <Navbar />
         <Routes>
           <Route exact path="/club" element={<Club/>} />
