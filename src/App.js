@@ -1,8 +1,31 @@
+import Navbar from './Components/Navbar';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Agenda from './Components/Agenda';
+import Club from './Components/Club';
+import Comptes from './Components/Comptes';
+import Formations from './Components/Formations';
+import Panier from './Components/Panier';
+import Projets from './Components/Projets';
+import Services from './Components/Services';
+import Travaux from './Components/Travaux';
+
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <Router>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route exact path="/club" element={<Club/>} />
+          <Route exact path="/agenda" element={<Agenda/>} />
+          <Route exact path="/services" element={<Services/>} />
+          <Route exact path="/travaux" element={<Travaux/>} />
+          <Route exact path="/formations" element={<Formations/>} />
+          <Route exact path="/projets" element={<Projets/>} />
+          <Route exact path="/panier" element={<Panier/>} />
+          <Route exact path="/comptes" element={<Comptes/>} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

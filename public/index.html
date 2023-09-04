@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,11 +14,56 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
     <title>React App</title>
   </head>
   <body>
-    
+    <div id="root"></div>
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="pangonews_logo">PaNGO News</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="Navbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <div id="clubpress">
+            <li class="nav-item active">
+              <a class="nav-link" href="club">Club Presse<span class="sr-only">(current)</span></a>
+            </li>
+            <div class="dropdown-content">
+              <a href="#">Ambassadeur</a>
+              <a href="#">Artistes</a>
+            <a href="#">Associations</a>
+            <a href="#">Entreprises</a>
+            <a href="#">Journalistes</a>
+            <a href="#">MappeMonde</a>
+          </div>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link" href="agenda">Agenda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services">Nos services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="travaux">Nos travaux</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="formations">Nos formations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="projets">Vos projets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="panier">Panier</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="compte">Compte</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+    </div>
   </body>
 </html>
