@@ -59,6 +59,9 @@ code {
 #projets:hover .dropdown-content {
   display: block;
 }
+.menu {
+  border-radius: 50%;
+}
 
 .roundIcon {
   border-radius: 10px;

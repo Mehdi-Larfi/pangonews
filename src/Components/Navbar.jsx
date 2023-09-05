@@ -1,5 +1,4 @@
-import React from "react";
-import TemporaryDrawer from "./Menudrawer";
+import React from 'react';
 
 function Navbar() {
   return (
