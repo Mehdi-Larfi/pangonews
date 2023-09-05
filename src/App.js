@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <div>
-        <Menu />
+        {/* <Menu /> */}
         <Navbar />
         <Routes>
           <Route exact path="/club" element={<Club/>} />

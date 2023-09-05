@@ -59,3 +59,8 @@ code {
 #projets:hover .dropdown-content {
   display: block;
 }
+
+.menu {
+  border-radius: 50%;
+}
+
