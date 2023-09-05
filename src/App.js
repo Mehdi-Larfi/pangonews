@@ -8,12 +8,15 @@ import Panier from './Components/Panier';
 import Projets from './Components/Projets';
 import Services from './Components/Services';
 import Travaux from './Components/Travaux';
+import Menu from './Components/Menu';
+import Menudrawer from './Components/Menudrawer';
 
 function App() {
   return (
     <Router>
       <div>
         <Navbar />
+        
         <Routes>
           <Route exact path="/club" element={<Club/>} />
           <Route exact path="/agenda" element={<Agenda/>} />

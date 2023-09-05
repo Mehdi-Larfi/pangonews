@@ -1,31 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <title>React App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <!--<div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
+import AppsIcon from '@mui/icons-material/Apps';
+import MenuIcon from '@mui/icons-material/Menu';
+import Navbar from './Navbar';
+
+
+export default function TemporaryDrawer() {
+  const [state, setState] = React.useState({
+    Menu: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  const list = (anchor) => (
+    <Box
+      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 300 }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        {['Club Presse'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <AppsIcon /> : <AppsIcon />}
+              </ListItemIcon>
+              <ListItemText>
+                <div>
+      <nav class=" navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="pangonews_logo">PaNGO News</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="Navbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+          <ul class="">
             <div id="clubpress">
             <li class="nav-item active">
               <a class="nav-link" href="club">Club Presse ⌵<span class="sr-only"></span></a>
@@ -44,7 +69,6 @@
             </li>
             <div id="nos_services">
             <li class="nav-item">
-              <div id="nos_services">
               <a class="nav-link" href="services">Nos services ⌵ </a>
             </li>
             <div class="dropdown-content">
@@ -79,8 +103,30 @@
             </li>
           </ul>
         </div>
-      </nav>
-      <p>hello</p>
-    </div>-->
-  </body>
-</html>
+      </nav></div>
+      </ListItemText>
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      
+    </Box>
+  );
+
+  return (
+    <div>
+      {['Menu'].map((anchor) => (
+        <React.Fragment key={anchor}>
+          <Button onClick={toggleDrawer(anchor, true)}><MenuIcon class='roundIcon' /></Button>
+          <Drawer
+            anchor={anchor}
+            open={state[anchor]}
+            onClose={toggleDrawer(anchor, false)}
+          >
+            {list(anchor)}
+          </Drawer>
+        </React.Fragment>
+      ))}
+    </div>
+  );
+}

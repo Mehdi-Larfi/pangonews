@@ -59,3 +59,40 @@ code {
 #projets:hover .dropdown-content {
   display: block;
 }
+
+.roundIcon {
+  border-radius: 10px;
+ border-bottom: 1;
+}
+
+.compte {
+  background-color: #000000;
+  color: #fff;
+  margin-left: 10px;
+  border-radius: 20px;
+  box-shadow: 2px 8px 12px #0000007a;
+  padding: 10px 20px;
+  
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(5%);
+    transform: translateY(-5%);
+  }
+
+  to {
+    transform: translateX(0%);
+    transform: translateY(0%);
+  }
+}
+
+.compte a{
+  color: #fff;
+  text-decoration: none;
+
+}
+.compte:hover {
+  animation-duration: 3s;
+  animation-name: slide-in;
+}
