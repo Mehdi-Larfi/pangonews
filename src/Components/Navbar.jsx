@@ -6,7 +6,7 @@ function Navbar() {
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <TemporaryDrawer />
-        <a class="navbar-brand" href="pangonews_logo">
+        <a class="navbar-brand" href="/">
           <img src="assets/Pangoicon.png" alt="PANGONEWS" />
         </a>
         <button

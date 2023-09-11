@@ -10,6 +10,7 @@ import Services from './Components/Services';
 import Travaux from './Components/Travaux';
 import Menu from './Components/Menu'
 import Menudrawer from './Components/Menudrawer';
+import Accueil from './Components/Accueil';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Navbar />
         
         <Routes>
+          <Route exact path="/" element={<Accueil/>} />
           <Route exact path="/club" element={<Club/>} />
           <Route exact path="/agenda" element={<Agenda/>} />
           <Route exact path="/services" element={<Services/>} />

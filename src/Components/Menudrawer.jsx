@@ -13,6 +13,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import AppsIcon from '@mui/icons-material/Apps';
 import MenuIcon from '@mui/icons-material/Menu';
 import Navbar from './Navbar';
+//import Pangoicon from 'src/assets/Pangoicon.png'
 
 
 export default function TemporaryDrawer() {
@@ -45,7 +46,7 @@ export default function TemporaryDrawer() {
               <ListItemText>
                 <div>
       <nav class=" navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="pangonews_logo">PaNGO News</a>
+        <a class="navbar-brand" href="/"><img src='src\assets\Pangoicon.png' alt="PANGO NEWS" /></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="Navbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

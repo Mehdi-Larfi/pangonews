@@ -1,14 +1,14 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -17,7 +17,7 @@ code {
 }
 
 #clubpress {
-  position:relative;
+  position: relative;
   display: inline-block;
 }
 
@@ -42,7 +42,7 @@ code {
 }
 
 #nos_services {
-  position:relative;
+  position: relative;
   display: inline-block;
 }
 
@@ -64,7 +64,7 @@ code {
 
 .roundIcon {
   border-radius: 10px;
- border-bottom: 1;
+  border-bottom: 1;
 }
 
 .compte {
@@ -74,7 +74,6 @@ code {
   border-radius: 20px;
   box-shadow: 2px 8px 12px #0000007a;
   padding: 10px 20px;
-  
 }
 
 @keyframes slide-in {
@@ -89,12 +88,152 @@ code {
   }
 }
 
-.compte a{
+.accueil {
+  background: #ddd;
+}
+
+.compte a {
   color: #fff;
   text-decoration: none;
-
 }
 .compte:hover {
   animation-duration: 3s;
   animation-name: slide-in;
+}
+
+.icon1 {
+  position: relative;
+  top: 200px;
+
+  animation-name: slide-in;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.icon2 {
+  position: relative;
+  top: 75px;
+
+  animation-name: slide-in;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.icon3 {
+  position: relative;
+  top: 40px;
+
+  animation-name: slide-in;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.icon4 {
+  position: relative;
+  top: 150px;
+
+  animation-name: slide-in;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.icon5 {
+  position: relative;
+  top: 25px;
+
+  animation-name: slide-in;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.icon6 {
+  position: relative;
+  top: 300px;
+
+  animation-name: slide-in;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.icon7 {
+  position: relative;
+  top: 230px;
+
+  animation-name: slide-in;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.icon8 {
+  position: relative;
+  top: 100px;
+
+  animation-name: slide-in;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.arrierePlan {
+  min-height: fit-content;
+  margin-top: 5px;
+  padding-top: 10px;
+  padding-bottom: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 10px;
+  flex-wrap: wrap;
+  background: linear-gradient(white 75%, #9999cc);
+}
+
+.animInscription {
+  background-color: #000000;
+  font-weight: bold;
+  color: #fff;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.arriereEdito {
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5%;
+}
+
+.arriereEdito h3{
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.menuderoulant {
+  text-align: center;
+}
+
+.containerflerow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 10;
+  flex-wrap: wrap;
+}
+
+.editoinfos {
+  box-shadow: 2px 8px 12px #0000007a;
+  border-radius: 10px;
+  max-width: 40%;
+  padding: 10px;
+  background: #f0f0f0;
+}
+
+.editoinfos h4 {
+  border-radius: 20px;
+  width:fit-content;
+  padding: 5px 10px;
+  margin: 5px 5px;
+  background: linear-gradient(to right, #973393, #9999cc, #99cccc, #339999);
+}
+
+.editoinfos a{
+  text-decoration: none;
 }
